@@ -1,0 +1,1 @@
+This a project using a weather api to GET the current weather conditions form a location.
