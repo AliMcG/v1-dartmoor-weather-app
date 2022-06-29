@@ -20,17 +20,18 @@ const url = "/api"
 // });
 
 async function getWeatherDart() {
-    // let long = -3.87634699388993;
-    // let lat = 50.54288694008082;
-    // let response = await fetch (`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`);
     const response = await fetch(`${url}/dartmeet`);
     const data = await response.json();
     console.log(data);
     console.log(data.payload.main.temp);
+    const iconId = data.payload.weather[0].icon
+    const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
+    console.log(res.url);
     const dartmeetTemperature = document.querySelector(".dartmeet-temperature"); 
     dartmeetTemperature.innerText = data.payload.main.temp;
-    const dartmeetIcon = document.querySelector("#dartmeet-weather-icon");
+    const dartmeetIcon = document.querySelector("#dartmeet-weather");
     dartmeetIcon.innerText = data.payload.weather[0].description;
+    document.getElementById('dartmeet-icon').src=`${res.url}`;
 };
 
 getWeatherDart();

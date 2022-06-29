@@ -8,7 +8,7 @@ export async function getDartmeetWeather(){
   const lat = 50.54288694008082;
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`);
   const data = await response.json();
-  console.log(data);
-  console.log(data.main.temp);
+  // console.log(data);
+  // console.log(data.main.temp);
   return data;
 };
