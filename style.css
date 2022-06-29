@@ -1,0 +1,50 @@
+/* use flex-box to position stuff
+ */
+
+*{
+  margin: o;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(#22333B, #639FAB);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+}
+
+img {
+  transform: skew(20deg, 30deg);
+  padding: 10vh;
+}
+
+.card {
+  position: relative;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 5px 10px black;
+  background: linear-gradient(#22333B, #639FAB);
+  height: 180px;
+  width: 180px;
+}
+
+#dartmeet {
+  bottom: 17px;
+  left: -270px;
+}
+
+#postbridge {
+  bottom: 17px;
+  left: -170px;
+}
+
+#havford {
+  bottom: 17px;
+  left: -70px;
+}
