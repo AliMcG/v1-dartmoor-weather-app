@@ -40,9 +40,7 @@ getWeatherDart();
 
 
 // async function getWeatherPost() {
-//     let long = -3.904797407096003;
-//     let lat = 50.59543292118994;
-//     let response = await fetch (`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`);
+//     
 //     let data = await response.json();
 //     console.log(data);
 //     console.log(data.main.temp);
