@@ -2,7 +2,7 @@
  */
 
 *{
-  margin: o;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -18,9 +18,9 @@ body {
   color: white;
 }
 
-img {
-  transform: skew(20deg, 30deg);
-  padding: 10vh;
+.location {
+  position: relative;
+  bottom: 50px;
 }
 
 .card {
@@ -28,10 +28,11 @@ img {
   border: 2px solid white;
   border-radius: 8px;
   padding: 5px;
-  box-shadow: 5px 10px black;
+  box-shadow: 5px 5px black;
   background: linear-gradient(#22333B, #639FAB);
   height: 180px;
   width: 180px;
+  text-align: center;
 }
 
 #dartmeet {
