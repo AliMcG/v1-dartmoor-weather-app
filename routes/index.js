@@ -1,10 +1,10 @@
 import express from "express"
-import { getDartmeet } from "../models/index.js"
+import { getDartmeetWeather } from "../models/index.js"
 
 const weatherRouter = express.Router();
 
 weatherRouter.get("/dartmeet", async (req, res) => {
-  const result = await getDartmeet();
+  const result = await getDartmeetWeather();
   res.json({success: true, payload: result});
 })
 

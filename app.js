@@ -16,11 +16,11 @@ app.use(express.static("public"));
 app.use("/api", weatherRouter);
 
 /** This renders the front-end */
-app.get("/", function (req, res) {
+app.get("/", (req, res) => {
   res.render("index", { title: "Dartmoor" });
 });
 
 // Listening on Localhost:3000
-app.listen(PORT, ()=>{
+app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
 });
