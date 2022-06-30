@@ -4,7 +4,7 @@ import "dotenv/config"
 import weatherRouter from "./routes/index.js"
 
 const app = express();
-const PORT = "3000";
+const PORT = "5000";
 
 // Logger show helpful messages in the console.
 app.use(logger("dev"));
@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
   res.render("index", { title: "Dartmoor" });
 });
 
-// Listening on Localhost:3000
+// Listening on Localhost:5000
 app.listen(PORT, () => {
   console.log(`Server listening on port: ${PORT}`);
 });
