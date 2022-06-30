@@ -9,9 +9,10 @@ describe("Testing '/dartmeet' route should return a weather object", () => {
   
   test("Should respond with status code is 200 and a json", async () => {
     //Act:
-    const response = await request(app).get("/dartmeet");
+    const response = await request(app).get("/test");
+    console.log(response);
     //Assert:
-    // expect(response.statusCode).toBe(200);
+    expect(response.statusCode).toBe(200);
     // expect(response.headers["content-type"]).toMatch(/json/);
   });
 });

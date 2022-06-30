@@ -13,16 +13,19 @@ export async function getDartmeetWeather(){
   return data;
 };
 
-/**
-Postbridge
-const long = -3.904797407096003;
-const lat = 50.59543292118994;
-const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`); 
+export async function getPostbridgeWeather(){
+  const long = -3.904797407096003;
+  const lat = 50.59543292118994;
+  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`);
+  const data = await response.json();
+  return data;
+};
 
 
-Havford
-const long = -3.918072245803985;
-const lat = 50.418839224119246;
-const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`);
-
-*/
+export async function getHavfordWeather(){
+  const long = -3.918072245803985;
+  const lat = 50.418839224119246;
+  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`);
+  const data = await response.json();
+  return data;
+};

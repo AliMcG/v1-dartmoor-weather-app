@@ -1,5 +1,65 @@
 const url = "/api"
 
+async function getWeatherDart() {
+    const response = await fetch(`${url}/dartmeet`);
+    const data = await response.json();
+    // console.log(data);
+    // console.log(data.payload.main.temp);
+    const iconId = data.payload.weather[0].icon
+    const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
+    document.getElementById('dartmeet-icon').src=`${res.url}`;
+    // console.log(res.url);
+    const dartmeetTemperature = document.querySelector(".dartmeet-temperature"); 
+    dartmeetTemperature.innerText = data.payload.main.temp;
+    const dartmeetDescription = document.querySelector("#dartmeet-weather");
+    dartmeetDescription.innerText = data.payload.weather[0].description;
+};
+
+getWeatherDart();
+
+async function getWeatherPost() {
+    const response = await fetch(`${url}/postbridge`);
+    const data = await response.json();
+    console.log(data);
+    console.log(data.payload.main.temp);
+    const iconId = data.payload.weather[0].icon
+    const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
+    document.getElementById('postbridge-icon').src=`${res.url}`;
+    console.log(res.url);
+    const postbridgeTemperature = document.querySelector(".postbridge-temperature"); 
+    postbridgeTemperature.innerText = data.payload.main.temp;
+    const postbridgeDescription = document.querySelector("#postbridge-weather");
+    postbridgeDescription.innerText = data.payload.weather[0].description;
+};
+
+getWeatherPost();
+
+async function getWeatherHavford() {
+    const response = await fetch(`${url}/havford`);
+    const data = await response.json();
+    const iconId = data.payload.weather[0].icon
+    const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
+    document.getElementById('havford-icon').src=`${res.url}`;
+    const havfordTemperature = document.querySelector(".havford-temperature"); 
+    havfordTemperature.innerText = data.payload.main.temp;
+    const havfordDescription = document.querySelector("#havford-weather");
+    havfordDescription.innerText = data.payload.weather[0].description;
+};
+
+getWeatherHavford();
+
+
+
+/*
+a list of locations long and lat accross dartmoor
+
+Dartmeet = 50.54288694008082, -3.87634699388993
+Ponswrothy = 50.54875187209245, -3.8353971126325623
+Harford = 50.41878569340013, -3.917283233241301
+
+*/
+
+// 👇 This will get the users current location and weather
 
 // async function getWeather() {
 //   let response = await fetch (`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=3.545717609421039&appid=${key}&units=metric`);
@@ -18,62 +78,3 @@ const url = "/api"
 //     }})
 //   }
 // });
-
-async function getWeatherDart() {
-    const response = await fetch(`${url}/dartmeet`);
-    const data = await response.json();
-    console.log(data);
-    console.log(data.payload.main.temp);
-    const iconId = data.payload.weather[0].icon
-    const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
-    console.log(res.url);
-    const dartmeetTemperature = document.querySelector(".dartmeet-temperature"); 
-    dartmeetTemperature.innerText = data.payload.main.temp;
-    const dartmeetIcon = document.querySelector("#dartmeet-weather");
-    dartmeetIcon.innerText = data.payload.weather[0].description;
-    document.getElementById('dartmeet-icon').src=`${res.url}`;
-};
-
-getWeatherDart();
-
-
-
-
-// async function getWeatherPost() {
-//     
-//     let data = await response.json();
-//     console.log(data);
-//     console.log(data.main.temp);
-//     let postbridgeTemperature = document.querySelector(".postbridge-temperature"); 
-//     postbridgeTemperature.innerText = data.main.temp;
-//     let postbridgeIcon = document.querySelector("#postbridge-weather-icon");
-//     postbridgeIcon.innerText = data.weather[0].description;
-// };
-
-// getWeatherPost();
-
-// async function getWeatherHavford() {
-//     let long = -3.918072245803985;
-//     let lat = 50.418839224119246;
-//     let response = await fetch (`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`);
-//     let data = await response.json();
-//     console.log(data);
-//     console.log(data.main.temp);
-//     let havfordTemperature = document.querySelector(".havford-temperature"); 
-//     havfordTemperature.innerText = data.main.temp;
-//     let havfordIcon = document.querySelector("#havford-weather-icon");
-//     havfordIcon.innerText = data.weather[0].description;
-// };
-
-// // getWeatherHavford();
-
-
-
-/*
-a list of locations long and lat accross dartmoor
-
-Dartmeet = 50.54288694008082, -3.87634699388993
-Ponswrothy = 50.54875187209245, -3.8353971126325623
-Harford = 50.41878569340013, -3.917283233241301
-
-*/
