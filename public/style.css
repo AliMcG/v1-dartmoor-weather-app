@@ -24,18 +24,27 @@ body {
 }
 
 .card {
-  position: relative;
   border: 2px solid white;
   border-radius: 8px;
   padding: 5px;
   box-shadow: 5px 5px black;
   background: linear-gradient(#639FAB, #22333B);
-  height: 180px;
-  width: 180px;
+  height: 200px;
+  width: 210px;
   text-align: center;
+  margin: 10px;
 }
 
-#dartmeet {
+.box1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box2 {
+  display: flex;
+  justify-content: space-around;
+}
+/* #dartmeet {
   bottom: 17px;
   left: -270px;
 }
@@ -48,4 +57,4 @@ body {
 #havford {
   bottom: 17px;
   left: -70px;
-}
+} */

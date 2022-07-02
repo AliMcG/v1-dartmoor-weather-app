@@ -1,5 +1,13 @@
 import express from "express"
-import { getDartmeetWeather, getPostbridgeWeather, getHavfordWeather } from "../models/index.js"
+import { 
+  getDartmeetWeather, 
+  getPostbridgeWeather, 
+  getHavfordWeather, 
+  getWalkhamptonWeather,
+  getChagfordWeather,
+  getDowntonWeather,
+  getSouthzealWeather
+ } from "../models/index.js"
 
 const weatherRouter = express.Router();
 
@@ -18,5 +26,24 @@ weatherRouter.get("/havford", async (req, res) => {
   res.json({success: true, payload: result});
 })
 
+weatherRouter.get("/walkhampton", async (req, res) => {
+  const result = await getWalkhamptonWeather();
+  res.json({success: true, payload: result});
+})
+
+weatherRouter.get("/downton", async (req, res) => {
+  const result = await getDowntonWeather();
+  res.json({success: true, payload: result});
+})
+
+weatherRouter.get("/south-zeal", async (req, res) => {
+  const result = await getSouthzealWeather();
+  res.json({success: true, payload: result});
+})
+
+weatherRouter.get("/chagford", async (req, res) => {
+  const result = await getChagfordWeather();
+  res.json({success: true, payload: result});
+})
 
 export default weatherRouter;

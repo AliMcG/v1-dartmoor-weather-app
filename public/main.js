@@ -48,33 +48,58 @@ async function getWeatherHavford() {
 
 getWeatherHavford();
 
+async function getWeatherWalkhampton() {
+    const response = await fetch(`${url}/walkhampton`);
+    const data = await response.json();
+    const iconId = data.payload.weather[0].icon
+    const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
+    document.getElementById('walkhampton-icon').src=`${res.url}`;
+    const walkhamptonTemperature = document.querySelector(".walkhampton-temperature"); 
+    walkhamptonTemperature.innerText = data.payload.main.temp;
+    const walkhamptonDescription = document.querySelector("#walkhampton-weather");
+    walkhamptonDescription.innerText = data.payload.weather[0].description;
+};
 
+getWeatherWalkhampton();
 
-/*
-a list of locations long and lat accross dartmoor
+async function getWeatherDownton() {
+    const response = await fetch(`${url}/downton`);
+    const data = await response.json();
+    const iconId = data.payload.weather[0].icon
+    const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
+    document.getElementById('downton-icon').src=`${res.url}`;
+    const downtonTemperature = document.querySelector(".downton-temperature"); 
+    downtonTemperature.innerText = data.payload.main.temp;
+    const downtonDescription = document.querySelector("#downton-weather");
+    downtonDescription.innerText = data.payload.weather[0].description;
+};
 
-Dartmeet = 50.54288694008082, -3.87634699388993
-Ponswrothy = 50.54875187209245, -3.8353971126325623
-Harford = 50.41878569340013, -3.917283233241301
+getWeatherDownton();
 
-*/
+async function getWeatherSouthzeal() {
+    const response = await fetch(`${url}/south-zeal`);
+    const data = await response.json();
+    const iconId = data.payload.weather[0].icon
+    const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
+    document.getElementById('south-zeal-icon').src=`${res.url}`;
+    const southzealTemperature = document.querySelector(".south-zeal-temperature"); 
+    southzealTemperature.innerText = data.payload.main.temp;
+    const southzealDescription = document.querySelector("#south-zeal-weather");
+    southzealDescription.innerText = data.payload.weather[0].description;
+};
 
-// 👇 This will get the users current location and weather
+getWeatherSouthzeal();
 
-// async function getWeather() {
-//   let response = await fetch (`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=3.545717609421039&appid=${key}&units=metric`);
-//   let data = await response.json();
-// };
-// window.addEventListener("load", () => {
-//   let long;
-//   let lat;
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(position => {
-//       long = position.coords.longitude;
-//       lat = position.coords.latitude;
-//       console.log(`long: ${long}`);
-//       console.log(`lat : ${lat}`);
-//       if (long & lat) {
-//     }})
-//   }
-// });
+async function getWeatherChagford() {
+    const response = await fetch(`${url}/chagford`);
+    const data = await response.json();
+    const iconId = data.payload.weather[0].icon
+    const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
+    document.getElementById('chagford-icon').src=`${res.url}`;
+    const chagfordTemperature = document.querySelector(".chagford-temperature"); 
+    chagfordTemperature.innerText = data.payload.main.temp;
+    const chagfordDescription = document.querySelector("#chagford-weather");
+    chagfordDescription.innerText = data.payload.weather[0].description;
+};
+
+getWeatherChagford();
