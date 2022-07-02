@@ -18,9 +18,5 @@ weatherRouter.get("/havford", async (req, res) => {
   res.json({success: true, payload: result});
 })
 
-weatherRouter.get("/test", (req, res) => {
-  res.sendStatus(200);
-})
-
 
 export default weatherRouter;
