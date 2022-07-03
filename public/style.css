@@ -1,14 +1,12 @@
 /* use flex-box to position stuff
  */
 
-*{
-  margin: 0;
-  padding: 0;
+* {
   box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
+  /* height: auto; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -19,8 +17,9 @@ body {
 }
 
 .location {
-  position: relative;
-  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  bottom: 10vh;
 }
 
 .card {
@@ -29,8 +28,8 @@ body {
   padding: 5px;
   box-shadow: 5px 5px black;
   background: linear-gradient(#639FAB, #22333B);
-  height: 200px;
-  width: 210px;
+  height: 15rem;
+  width: 15rem;
   text-align: center;
   margin: 10px;
 }
@@ -44,17 +43,3 @@ body {
   display: flex;
   justify-content: space-around;
 }
-/* #dartmeet {
-  bottom: 17px;
-  left: -270px;
-}
-
-#postbridge {
-  bottom: 17px;
-  left: -170px;
-}
-
-#havford {
-  bottom: 17px;
-  left: -70px;
-} */

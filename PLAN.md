@@ -15,6 +15,7 @@ will take a weather API in and display details from it based on location (longit
 
 ## CSS
 responsive CSS to cards?
+used flex box but the layout is not responsive
 
 ## Data structre
 what can displayed or unpacked from the api?
