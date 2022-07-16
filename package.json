@@ -2,7 +2,7 @@
   "name": "dartmoor-weather-app-express",
   "version": "1.0.0",
   "description": "This a project using a weather api to GET the current weather conditions from a location.",
-  "main": "main.js",
+  "main": "web.js",
   "type": "module",
   "scripts": {
     "start": "node -r dotenv/config app.js",
