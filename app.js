@@ -2,7 +2,7 @@ import express from "express"
 import logger from "morgan"
 import "dotenv/config"
 import weatherRouter from "./routes/index.js"
-
+const PORT = "5010";
 const app = express();
 // const PORT = "5000";
 
@@ -19,5 +19,8 @@ app.use("/api", weatherRouter);
 // app.get("/", (req, res) => {
 //   res.render("index", { title: "Dartmoor" });
 // });
+app.listen(PORT, () => {
+  console.log(`Server listening on port: ${PORT}`);
+});
 
 export default app;
