@@ -14,7 +14,7 @@
     "url": "git+https://github.com/AliMcG/dartmoor-weather-app-express.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "AliMcG",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/AliMcG/dartmoor-weather-app-express/issues"
@@ -28,5 +28,8 @@
     "node-fetch": "^3.2.6",
     "nodemon": "^2.0.18",
     "supertest": "^6.2.3"
+  },
+  "engines": {
+    "node": "16.15.1"
   }
 }

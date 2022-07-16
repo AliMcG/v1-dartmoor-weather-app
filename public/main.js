@@ -3,7 +3,7 @@ const url = "/api"
 async function getWeatherDart() {
     const response = await fetch(`${url}/dartmeet`);
     const data = await response.json();
-    // console.log(data);
+    console.log(data);
     // console.log(data.payload.main.temp);
     const iconId = data.payload.weather[0].icon
     const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
