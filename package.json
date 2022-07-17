@@ -5,7 +5,7 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "start": "node -r dotenv/config app.js",
+    "start": "node app.js",
     "dev": "nodemon -r dotenv/config app.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
@@ -13,7 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/AliMcG/dartmoor-weather-app-express.git"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
   "author": "AliMcG",
   "license": "ISC",
   "bugs": {
@@ -27,6 +31,7 @@
     "morgan": "^1.10.0",
     "node-fetch": "^3.2.6",
     "nodemon": "^2.0.18",
+    "path": "^0.12.7",
     "supertest": "^6.2.3"
   },
   "engines": {
