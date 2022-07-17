@@ -1,6 +1,6 @@
 const url = "/api"
-// const apiKey = process.env.API_KEY
-const apikey = "245d0858a48d16422c1fa7a2ff0ed6ec"
+const apiKey = process.env.API_KEY
+// const apiKey = "245d0858a48d16422c1fa7a2ff0ed6ec"
 
 async function getWeatherDart() {
     const long = -3.87634699388993;
@@ -10,14 +10,14 @@ async function getWeatherDart() {
     const data = await response.json();
     console.log(data);
     // console.log(data.payload.main.temp);
-    const iconId = data.payload.weather[0].icon
+    const iconId = data.weather[0].icon
     const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
     document.getElementById('dartmeet-icon').src=`${res.url}`;
     // console.log(res.url);
     const dartmeetTemperature = document.querySelector(".dartmeet-temperature"); 
-    dartmeetTemperature.innerText = data.payload.main.temp;
+    dartmeetTemperature.innerText = data.main.temp;
     const dartmeetDescription = document.querySelector("#dartmeet-weather");
-    dartmeetDescription.innerText = data.payload.weather[0].description;
+    dartmeetDescription.innerText = data.weather[0].description;
 };
 
 getWeatherDart();
@@ -25,8 +25,8 @@ getWeatherDart();
 async function getWeatherPost() {
     const response = await fetch(`${url}/postbridge`);
     const data = await response.json();
-    console.log(data);
-    console.log(data.payload.main.temp);
+    // console.log(data);
+    // console.log(data.payload.main.temp);
     const iconId = data.payload.weather[0].icon
     const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
     document.getElementById('postbridge-icon').src=`${res.url}`;
