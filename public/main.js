@@ -11,8 +11,8 @@ async function getWeatherDart() {
     console.log(data);
     // console.log(data.payload.main.temp);
     const iconId = data.weather[0].icon
-    const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
-    document.getElementById('dartmeet-icon').src=`${res.url}`;
+    // const res = await fetch(`http://openweathermap.org/img/wn/${iconId}@2x.png`)
+    document.getElementById('dartmeet-icon').src=`http://openweathermap.org/img/wn/${iconId}@2x.png`;
     // console.log(res.url);
     const dartmeetTemperature = document.querySelector(".dartmeet-temperature"); 
     dartmeetTemperature.innerText = data.main.temp;
