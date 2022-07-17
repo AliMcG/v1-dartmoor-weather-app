@@ -1,5 +1,5 @@
 const url = "/api"
-const apiKey = API_KEY
+const apiKey = process.env.API_KEY
 // const apiKey = "245d0858a48d16422c1fa7a2ff0ed6ec"
 
 async function getWeatherDart() {
