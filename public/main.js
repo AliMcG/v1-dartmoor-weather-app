@@ -3,7 +3,7 @@ const url = "/api"
 async function getWeatherDart() {
     const long = -3.87634699388993;
     const lat = 50.54288694008082;
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}&units=metric`);
     // const response = await fetch(`${url}/dartmeet`);
     const data = await response.json();
     console.log(data);
