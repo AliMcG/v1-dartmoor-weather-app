@@ -1,7 +1,7 @@
 import "dotenv/config"
 import fetch from 'node-fetch';
 
-const apiKey = process.env.API_KEY
+export const apiKey = process.env.API_KEY
 
 export async function getDartmeetWeather(){
   const long = -3.87634699388993;
