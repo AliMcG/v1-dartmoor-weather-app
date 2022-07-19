@@ -1,5 +1,5 @@
 // import { apiKey } from "../models";
-const url = process.env.API_URL
+const url = "https://salty-depths-59147.herokuapp.com"
 // const apiKey = API_KEY
 // const apiKey = process.env.API_KEY
 // const apiKey = "245d0858a48d16422c1fa7a2ff0ed6ec"
