@@ -26,10 +26,6 @@ weatherRouter.get("/havford", async (req, res) => {
   res.json({success: true, payload: result});
 })
 
-weatherRouter.get("/walkhampton", async (req, res) => {
-  const result = await getWalkhamptonWeather();
-  res.json({success: true, payload: result});
-})
 
 weatherRouter.get("/downton", async (req, res) => {
   const result = await getDowntonWeather();

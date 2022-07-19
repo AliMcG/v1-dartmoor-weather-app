@@ -2,7 +2,11 @@ const url = "https://salty-depths-59147.herokuapp.com/portfolio"
 
 async function getWeatherDart() {
     
-    const response = await fetch(`${url}/dartmeet`);
+    const response = await fetch(`${url}/dartmeet`, {
+        headers: {
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "https://dartmoor-weather-appv1.netlify.app/"
+    }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
     document.getElementById('dartmeet-icon').src=`http://openweathermap.org/img/wn/${iconId}@2x.png`;
@@ -15,7 +19,11 @@ async function getWeatherDart() {
 getWeatherDart();
 
 async function getWeatherPost() {
-    const response = await fetch(`${url}/postbridge`);
+    const response = await fetch(`${url}/postbridge`, {
+        headers: {
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "https://dartmoor-weather-appv1.netlify.app/"
+    }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
     document.getElementById('postbridge-icon').src=`http://openweathermap.org/img/wn/${iconId}@2x.png`;
@@ -28,7 +36,11 @@ async function getWeatherPost() {
 getWeatherPost();
 
 async function getWeatherHavford() {
-    const response = await fetch(`${url}/havford`);
+    const response = await fetch(`${url}/havford`, {
+        headers: {
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "https://dartmoor-weather-appv1.netlify.app/"
+    }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
     document.getElementById('havford-icon').src=`http://openweathermap.org/img/wn/${iconId}@2x.png`;
@@ -41,7 +53,11 @@ async function getWeatherHavford() {
 getWeatherHavford();
 
 async function getWeatherDownton() {
-    const response = await fetch(`${url}/downton`);
+    const response = await fetch(`${url}/downton`, {
+        headers: {
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "https://dartmoor-weather-appv1.netlify.app/"
+    }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
     document.getElementById('downton-icon').src=`http://openweathermap.org/img/wn/${iconId}@2x.png`;
@@ -54,7 +70,11 @@ async function getWeatherDownton() {
 getWeatherDownton();
 
 async function getWeatherSouthzeal() {
-    const response = await fetch(`${url}/south-zeal`);
+    const response = await fetch(`${url}/south-zeal`, {
+        headers: {
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "https://dartmoor-weather-appv1.netlify.app/"
+    }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
     document.getElementById('south-zeal-icon').src=`http://openweathermap.org/img/wn/${iconId}@2x.png`;
@@ -67,7 +87,11 @@ async function getWeatherSouthzeal() {
 getWeatherSouthzeal();
 
 async function getWeatherChagford() {
-    const response = await fetch(`${url}/chagford`);
+    const response = await fetch(`${url}/chagford`, {
+        headers: {
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "https://dartmoor-weather-appv1.netlify.app/"
+    }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
     document.getElementById('chagford-icon').src=`http://openweathermap.org/img/wn/${iconId}@2x.png`;
