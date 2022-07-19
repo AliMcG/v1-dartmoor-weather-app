@@ -1,8 +1,8 @@
 // import { apiKey } from "../models";
-const url = "https://salty-depths-59147.herokuapp.com"
+// const url = "https://salty-depths-59147.herokuapp.com"
 // const apiKey = API_KEY
 // const apiKey = process.env.API_KEY
-// const apiKey = "245d0858a48d16422c1fa7a2ff0ed6ec"
+const url = process.env.REACT_APP_API_URL
 
 async function getWeatherDart() {
     // const long = -3.87634699388993;

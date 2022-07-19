@@ -14,7 +14,7 @@ app.use(logger("dev"));
 app.use(express.json());
 
 // Hosts the front-end html from the public folder.
-app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static(path.join(__dirname, "public")));
 
 /** This renders the front-end */
 app.get("/", (req, res) => {
