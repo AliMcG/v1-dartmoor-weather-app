@@ -1,4 +1,4 @@
-const url = "https://salty-depths-59147.herokuapp.com/portfolio"
+const url = "https://salty-depths-59147.herokuapp.com/portfolio/weather"
 
 async function getWeatherDart() {
     
