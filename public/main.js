@@ -5,7 +5,7 @@ async function getWeatherDart() {
     const response = await fetch(`${url}/dartmeet`, {
         headers: {
             'Content-Type': 'application/json',
-            "Access-Control-Allow-Origin": "https://dartmoor-weather-appv1.netlify.app/"
+            "Access-Control-Allow-Origin": "https://dartmoor-weather-app-v1.netlify.app/"
     }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
@@ -22,7 +22,7 @@ async function getWeatherPost() {
     const response = await fetch(`${url}/postbridge`, {
         headers: {
             'Content-Type': 'application/json',
-            "Access-Control-Allow-Origin": "https://dartmoor-weather-appv1.netlify.app/"
+            "Access-Control-Allow-Origin": "https://dartmoor-weather-app-v1.netlify.app/"
     }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
@@ -39,7 +39,7 @@ async function getWeatherHavford() {
     const response = await fetch(`${url}/havford`, {
         headers: {
             'Content-Type': 'application/json',
-            "Access-Control-Allow-Origin": "https://dartmoor-weather-appv1.netlify.app/"
+            "Access-Control-Allow-Origin": "https://dartmoor-weather-app-v1.netlify.app/"
     }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
@@ -56,7 +56,7 @@ async function getWeatherDownton() {
     const response = await fetch(`${url}/downton`, {
         headers: {
             'Content-Type': 'application/json',
-            "Access-Control-Allow-Origin": "https://dartmoor-weather-appv1.netlify.app/"
+            "Access-Control-Allow-Origin": "https://dartmoor-weather-app-v1.netlify.app/"
     }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
@@ -73,7 +73,7 @@ async function getWeatherSouthzeal() {
     const response = await fetch(`${url}/south-zeal`, {
         headers: {
             'Content-Type': 'application/json',
-            "Access-Control-Allow-Origin": "https://dartmoor-weather-appv1.netlify.app/"
+            "Access-Control-Allow-Origin": "https://dartmoor-weather-app-v1.netlify.app/"
     }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
@@ -90,7 +90,7 @@ async function getWeatherChagford() {
     const response = await fetch(`${url}/chagford`, {
         headers: {
             'Content-Type': 'application/json',
-            "Access-Control-Allow-Origin": "https://dartmoor-weather-appv1.netlify.app/"
+            "Access-Control-Allow-Origin": "https://dartmoor-weather-app-v1.netlify.app/"
     }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
