@@ -19,7 +19,6 @@
 [class*="col-"] {
   float: left;
   padding: 15px;
-  border: 1px solid red;
 }
 
 body {
@@ -29,7 +28,7 @@ body {
   flex-direction: column;
   align-items: center;
   background: linear-gradient(#22333B, #639FAB);
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
   min-height: 100vh;
