@@ -1,5 +1,4 @@
 const url = "https://salty-depths-59147.herokuapp.com/portfolio/weather"
-// https://salty-depths-59147.herokuapp.com/portfolio/project-data/my-projects
 
 async function getWeatherDart() {
     
@@ -10,7 +9,7 @@ async function getWeatherDart() {
     }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
-    document.getElementById('dartmeet-icon').src=`http://openweathermap.org/img/wn/${iconId}@2x.png`;
+    document.getElementById('dartmeet-icon').src=`https://openweathermap.org/img/wn/${iconId}@2x.png`;
     const dartmeetTemperature = document.querySelector(".dartmeet-temperature"); 
     dartmeetTemperature.innerText = data.payload.main.temp;
     const dartmeetDescription = document.querySelector("#dartmeet-weather");
@@ -27,7 +26,7 @@ async function getWeatherPost() {
     }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
-    document.getElementById('postbridge-icon').src=`http://openweathermap.org/img/wn/${iconId}@2x.png`;
+    document.getElementById('postbridge-icon').src=`https://openweathermap.org/img/wn/${iconId}@2x.png`;
     const postbridgeTemperature = document.querySelector(".postbridge-temperature"); 
     postbridgeTemperature.innerText = data.payload.main.temp;
     const postbridgeDescription = document.querySelector("#postbridge-weather");
@@ -44,7 +43,7 @@ async function getWeatherHavford() {
     }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
-    document.getElementById('havford-icon').src=`http://openweathermap.org/img/wn/${iconId}@2x.png`;
+    document.getElementById('havford-icon').src=`https://openweathermap.org/img/wn/${iconId}@2x.png`;
     const havfordTemperature = document.querySelector(".havford-temperature"); 
     havfordTemperature.innerText = data.payload.main.temp;
     const havfordDescription = document.querySelector("#havford-weather");
@@ -61,7 +60,7 @@ async function getWeatherDownton() {
     }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
-    document.getElementById('downton-icon').src=`http://openweathermap.org/img/wn/${iconId}@2x.png`;
+    document.getElementById('downton-icon').src=`https://openweathermap.org/img/wn/${iconId}@2x.png`;
     const downtonTemperature = document.querySelector(".downton-temperature"); 
     downtonTemperature.innerText = data.payload.main.temp;
     const downtonDescription = document.querySelector("#downton-weather");
@@ -78,7 +77,7 @@ async function getWeatherSouthzeal() {
     }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
-    document.getElementById('south-zeal-icon').src=`http://openweathermap.org/img/wn/${iconId}@2x.png`;
+    document.getElementById('south-zeal-icon').src=`https://openweathermap.org/img/wn/${iconId}@2x.png`;
     const southzealTemperature = document.querySelector(".south-zeal-temperature"); 
     southzealTemperature.innerText = data.payload.main.temp;
     const southzealDescription = document.querySelector("#south-zeal-weather");
@@ -95,7 +94,7 @@ async function getWeatherChagford() {
     }});
     const data = await response.json();
     const iconId = data.payload.weather[0].icon
-    document.getElementById('chagford-icon').src=`http://openweathermap.org/img/wn/${iconId}@2x.png`;
+    document.getElementById('chagford-icon').src=`https://openweathermap.org/img/wn/${iconId}@2x.png`;
     const chagfordTemperature = document.querySelector(".chagford-temperature"); 
     chagfordTemperature.innerText = data.payload.main.temp;
     const chagfordDescription = document.querySelector("#chagford-weather");
