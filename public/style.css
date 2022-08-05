@@ -34,15 +34,16 @@ body {
   min-height: 100vh;
 }
 
-/* .main {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  width: 100%;
-} */
 
+.headsup {
+  border: 2px solid white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 .header {
   border: 2px solid white;
@@ -50,11 +51,6 @@ body {
   padding: 15px;
 }
 
-.location {
-  display: flex;
-  justify-content: center;
-  /* bottom: 10rem; */
-}
 
 .card {
   border: 2px solid white;
@@ -68,14 +64,3 @@ body {
   margin: 2rem;
 }
 
-/* .box1 {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-}
-
-.box2 {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-} */
