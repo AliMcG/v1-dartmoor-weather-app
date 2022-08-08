@@ -62,5 +62,23 @@ body {
   width: 15rem;
   text-align: center;
   margin: 2rem;
+  margin-right: 5rem;
+  
 }
 
+.headsdown {
+  border: 2px solid white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

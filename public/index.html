@@ -14,11 +14,11 @@
       <h1>Dartmoor Weather by Locations</h1>
     </div>
     <div class="headsup">
-      <h4>Please give this app a minute to load the weather data</h4>
+      <h4>Please give this app a minute to load the weather data**</h4>
     </div>
 
     <div class="main">
-      <div class="box1">
+      
         <div class="card col-4" id="dartmeet">
           <h1 class="dartmeet-title">Dartmeet</h1>
           <p class="dartmeet-temperature">20c</p>
@@ -37,9 +37,9 @@
           <p id="havford-weather">Icon</p>
           <img id="havford-icon" src="" alt="a weather icon" />
         </div>
-      </div>
+      
 
-      <div class="box2">
+      
         <div class="card col-4" id="downton">
           <h1 class="downton-title">Downton</h1>
           <p class="downton-temperature">20c</p>
@@ -59,8 +59,10 @@
           <img id="chagford-icon" src="" alt="a weather icon" />
         </div>
       </div>
+    
+    <div class="headsdown">
+      <h4>** The weather data used on this app comes from <a href="https://openweathermap.org/">The Open Weather Api</a> to protect the api key, I have routed this page through a basic express.js server. Unfortunately this has created a lag time between the page opening and the data being delivered.</h4>
     </div>
-
     <script src="./main.js"></script>
   </body>
 </html>
