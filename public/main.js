@@ -1,7 +1,7 @@
 const url = "https://salty-depths-59147.herokuapp.com/portfolio/weather";
 
 async function getWeatherDart() {
-  const response = await fetch(`${url}/dartmeet`, {
+  const response = await fetch(`${url}/steps-bridge`, {
     headers: {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin":
@@ -66,7 +66,7 @@ async function getWeatherHavford() {
 getWeatherHavford();
 
 async function getWeatherDownton() {
-  const response = await fetch(`${url}/downton`, {
+  const response = await fetch(`${url}/dartmeet`, {
     headers: {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin":
