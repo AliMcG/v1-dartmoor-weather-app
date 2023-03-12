@@ -1,4 +1,6 @@
-const url = "https://salty-depths-59147.herokuapp.com/portfolio/weather";
+// const url = "https://salty-depths-59147.herokuapp.com/portfolio/weather";
+// const url = process.env.BACK_END_URL
+const url = "https://fathomless-refuge-10909.herokuapp.com/api/weatherv1"
 
 async function getWeatherDart() {
   const response = await fetch(`${url}/steps-bridge`, {
