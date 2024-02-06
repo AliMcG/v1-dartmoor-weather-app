@@ -1,7 +1,7 @@
 /**
  * Unable to use `process.env` in this environment.
  * Instead created an express.js server to protect the API key and other sensitive data.
- * Example code of how express server can be found in this repo.
+ * Example code of the express server can be found in this repo.
  */
 const url = "https://fathomless-refuge-10909.herokuapp.com/api/weatherv1"
 
