@@ -1,5 +1,8 @@
-// const url = "https://salty-depths-59147.herokuapp.com/portfolio/weather";
-// const url = process.env.BACK_END_URL
+/**
+ * Unable to use `process.env` in this environment.
+ * Instead created an express.js server to protect the API key and other sensitive data.
+ * Example code of how express server can be found in this repo.
+ */
 const url = "https://fathomless-refuge-10909.herokuapp.com/api/weatherv1"
 
 async function getWeatherDart() {

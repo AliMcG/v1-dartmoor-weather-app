@@ -6,7 +6,7 @@ import weatherRouter from "./routes/index.js";
 const PORT = process.env.PORT || 5010;
 const app = express();
 
-// Logger show helpful messages in the console.
+// Logger shows helpful messages in the console.
 app.use(logger("dev"));
 // Lets through json data.
 app.use(express.json());
